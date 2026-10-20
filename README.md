@@ -94,3 +94,10 @@ quaternion norm, unknown prefix preservation, the actual A/B integer and float
 fields, all shorter packet lengths and representative oversized lengths, invalid
 hex, NaN/infinity handling, and CLI success/error behavior. These validate the
 offline implementation, not sensor behavior or physical units.
+
+## HCI/ATT capture analysis
+
+Use `python analyze_hci.py session.pcapng --output timeline.json` to analyze
+Bluetooth H4 captures offline. See [HCI_ANALYSIS_GUIDE.md](HCI_ANALYSIS_GUIDE.md)
+for supported encapsulations, reassembly, UUID discovery, sensitive-value
+redaction, per-connection timelines, and stream-onset heuristic limitations.
